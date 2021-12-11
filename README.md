@@ -12,6 +12,42 @@ https://github.com/coding-to-music/TodoApp-supabase
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+```javascript {.line-numbers}
+Line 1
+Line 2
+Line 3
+Line 4
+Line 5
+Line 6
+```
+
+```java {.line-numbers}
+Line 1
+Line 2
+Line 3
+Line 4
+Line 5
+Line 6
+```
+
+```javascript=
+Line 1
+Line 2
+Line 3
+Line 4
+Line 5
+Line 6
+```
+
+```java=
+Line 1
+Line 2
+Line 3
+Line 4
+Line 5
+Line 6
+```
+
 ## Getting Started
 
 First, run the development server:
