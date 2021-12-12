@@ -2284,6 +2284,49 @@ With this our TodoApp is completed and ready for production.
 
 Before deploying the application on Vercel we need to run the `npm run build` command and check the terminal output to see if we have any errors.
 
+```java
+npm run build
+```
+
+Output
+```java
+> build
+> next build
+
+info  - Loaded env from /mnt/ap/ap/supabase-nextjs-todo-app/.env.local
+info  - Checking validity of types  
+info  - Creating an optimized production build  
+info  - Compiled successfully
+info  - Collecting page data  
+[    ] info  - Generating static pages (0/6)
+Error occurred prerendering page "/auth". Read more: https://nextjs.org/docs/messages/prerender-error
+TypeError: res.setHeader is not a function
+    at GoTrueApi.setAuthCookie (/mnt/ap/ap/supabase-nextjs-todo-app/node_modules/@supabase/gotrue-js/dist/main/GoTrueApi.js:377:17)
+    at handler (/mnt/ap/ap/supabase-nextjs-todo-app/.next/server/pages/auth.js:35:102)
+    at d (/mnt/ap/ap/supabase-nextjs-todo-app/node_modules/react-dom/cjs/react-dom-server.node.production.min.js:33:498)
+    at bb (/mnt/ap/ap/supabase-nextjs-todo-app/node_modules/react-dom/cjs/react-dom-server.node.production.min.js:36:16)
+    at a.b.render (/mnt/ap/ap/supabase-nextjs-todo-app/node_modules/react-dom/cjs/react-dom-server.node.production.min.js:42:43)
+    at a.b.read (/mnt/ap/ap/supabase-nextjs-todo-app/node_modules/react-dom/cjs/react-dom-server.node.production.min.js:41:83)
+    at Object.exports.renderToString (/mnt/ap/ap/supabase-nextjs-todo-app/node_modules/react-dom/cjs/react-dom-server.node.production.min.js:52:138)
+    at Object.renderPage (/mnt/ap/ap/supabase-nextjs-todo-app/node_modules/next/dist/server/render.js:686:46)
+    at Object.defaultGetInitialProps (/mnt/ap/ap/supabase-nextjs-todo-app/node_modules/next/dist/server/render.js:316:51)
+    at Function.getInitialProps (/mnt/ap/ap/supabase-nextjs-todo-app/.next/server/chunks/859.js:515:20)
+info  - Generating static pages (6/6)
+
+> Build error occurred
+Error: Export encountered errors on following paths:
+        /auth
+    at /mnt/ap/ap/supabase-nextjs-todo-app/node_modules/next/dist/export/index.js:500:19
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async Span.traceAsyncFn (/mnt/ap/ap/supabase-nextjs-todo-app/node_modules/next/dist/trace/trace.js:74:20)
+    at async /mnt/ap/ap/supabase-nextjs-todo-app/node_modules/next/dist/build/index.js:987:17
+    at async Span.traceAsyncFn (/mnt/ap/ap/supabase-nextjs-todo-app/node_modules/next/dist/trace/trace.js:74:20)
+    at async /mnt/ap/ap/supabase-nextjs-todo-app/node_modules/next/dist/build/index.js:861:13
+    at async Span.traceAsyncFn (/mnt/ap/ap/supabase-nextjs-todo-app/node_modules/next/dist/trace/trace.js:74:20)
+    at async Object.build [as default] (/mnt/ap/ap/supabase-nextjs-todo-app/node_modules/next/dist/build/index.js:82:25)
+```    
+
 There are two ways to configure an application on Vercel:
 
 - Using the [Vercel npm library](https://www.npmjs.com/package/vercel) and pushing the code locally to a Vercel server
